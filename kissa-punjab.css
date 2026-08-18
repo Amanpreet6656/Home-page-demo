@@ -451,7 +451,6 @@ body {
     background-color: #d4af37;
 } */
 
-
 .podcast-card-parent2 {
   max-width: 40%;
   height: 15rem;
@@ -465,41 +464,42 @@ body {
   background-color: hsla(220, 29%, 6%, 0.503);
 }
 
-.podcast-card-parent2 pre{
-  font-size:x-large
+.podcast-card-parent2 pre {
+  font-size: x-large;
 }
 
-.podcast-card-parent2 pre,p{
+.podcast-card-parent2 pre,
+p {
   color: #f4f4f4;
 }
 
-#watch-text-podcast-btn{
-  text-decoration:none;
+#watch-text-podcast-btn {
+  text-decoration: none;
 }
 
-.podcast-img-child img{
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
+.podcast-img-child img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
 }
 
-.podcast-watch-text{
-    color: #151b26;
+.podcast-watch-text {
+  color: #151b26;
 }
 
-#btn-width{
+#btn-width {
   width: fit-content;
   margin: auto;
 }
 
-.btn-innermost-div{
+.btn-innermost-div {
   display: flex;
-  flex-direction:row;
-  flex-wrap:nowrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   gap: 5px;
   text-align: center;
-  align-content:center ;
-  background-color:#d4af37 ;
+  align-content: center;
+  background-color: #d4af37;
   width: fit-content;
   border-radius: 8px;
   padding: 5px;
@@ -507,28 +507,26 @@ body {
 
 /* the podcast spotlight section ./ */
 
-
 /* Why kissa panjab section begins here  */
 
-
-.why-section-parent{
+.why-section-parent {
   display: flex;
   flex-direction: column;
-  justify-content:center ;
-  padding: 10px 40px ;
+  justify-content: center;
+  padding: 10px 40px;
   background-color: transparent;
 }
 
-.why-section-parent h3{
+.why-section-parent h3 {
   font-size: xx-large;
   color: #d4af37;
   text-align: center;
 }
 
-.kissa-panjab-child1{
-width: 29%;
+.kissa-panjab-child1 {
+  width: 29%;
 }
 
-.why-section-img-div img{
-width: 10rem;
+.why-section-img-div img {
+  width: 10rem;
 }
