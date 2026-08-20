@@ -1,0 +1,737 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  word-spacing: 3px;
+  /* outline: 1px solid white; */
+}
+
+:root {
+  --bg-main: #0b0e14;
+  --text-main: #d4af37;
+  --text-muted: #f4f4f4;
+  --accent: #facc15;
+  --accent-glow: rgba(250, 204, 21, 0.4);
+  --secondary: white;
+  --secondary-glow: rgba(225, 29, 72, 0.4);
+  --card-bg: #151b26;
+  --border-color: #d4af37;
+
+  --font-heading: font-family: "Cinzel", serif;
+  --font-body: "Noto Sans Gurmukhi", sans-serif;
+}
+body {
+  background-color: #0b0e14;
+}
+/* heading section */
+
+.nav-outer-div {
+  display: flex;
+  flex-direction: row;
+  gap: 250px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding: 10px;
+  border-bottom: 1px solid white;
+  position: fixed;
+  width: 100%;
+  max-width: 1515px;
+  min-width: 1200px;
+  background-color: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.nav-inner-div-img img {
+  height: 4.125rem;
+  width: 4.125rem;
+  border-radius: 50%;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  padding: 10px;
+  background-color: transparent;
+}
+
+.nav-links a {
+  padding: 10px;
+  background-color: transparent;
+  color: #f4f4f4;
+  text-decoration: none;
+}
+
+.nav-actions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
+.nav-actions a {
+  color: #151b26;
+  text-decoration: none;
+  font-size: medium;
+  font-weight: 700;
+  font-family: "Cinzel", serif;
+  align-content: center;
+}
+
+#nav-subscribe-text {
+  background-color: #d4af37;
+  padding: 8px 16px;
+  height: fit-content;
+  border-radius: 6px;
+  margin: auto;
+  font-weight: 800;
+}
+
+/* heading section  */
+/* Hero section  */
+
+.hero-section {
+  width: 95%;
+  height: 80vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(assets/Gemini_Generated_Image_iaii9niaii9niaii.png);
+}
+
+.hero-section h1 {
+  text-align: center;
+  font-size: 80px;
+  color: #facc15;
+}
+.hero-section p {
+  font-size: large;
+  text-align: center;
+  color: #f4f4f4;
+}
+
+.hero-section-parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+}
+
+.hero-section-child1 {
+  padding: 4px 16px;
+  background-color: #d4af37;
+  border-radius: 6px;
+}
+
+.text-decoration-hero{
+  text-decoration: none;
+}
+
+.btn-hero-section-parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+.img-flex-hero-section {
+  background-color: transparent;
+  height: fit-content;
+  align-content: center;
+  margin-top: px;
+}
+
+.text-center-class {
+  margin-top: 10px;
+}
+
+.hero-section-text {
+  color: #151b26;
+  text-align: center;
+  align-content: center;
+}
+
+.hero-section-img img {
+  width: 2rem;
+  border-radius: 50%;
+  align-content: center;
+}
+
+.hero-section-child2 {
+  padding: 4px 16px;
+  background-color: transparent;
+  border-radius: 6px;
+  align-content: center;
+  border: 1px solid #d4af37;
+}
+
+.hero-section-btn-text {
+  text-decoration: none;
+  color: #d4af37;
+}
+/* hero section ./ */
+
+/* About kissa panjab section */
+
+.about-parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+  border-top: 2px solid #d4af37;
+  border-bottom: 2px solid #d4af37;
+  padding: 30px;
+}
+
+.about-child-img {
+  width: 10rem;
+  border-radius: 50%;
+}
+
+.about-child-text {
+  width: 90vh;
+}
+.about-child-text h2 {
+  font-size: xx-large;
+  color: #d4af37;
+  padding: 10px;
+}
+.about-child-text p {
+  color: #f4f4f4;
+  font-size: 20px;
+  text-align: left;
+  padding: 10px;
+  word-spacing: 7px;
+}
+
+/* kissa panjab about us section ./ */
+
+/* OUR CONTENT CATEGORIES  */
+
+#content-category {
+  color: #d4af37;
+  font-size: xx-large;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+.content-section-outer-div {
+  width: 90%;
+  margin: auto;
+}
+
+.content-section-parent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 5px;
+}
+
+.content-section-child1 {
+  padding: 20px;
+  background-color: #0f1521;
+  border: 1px solid #d4af37;
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+.content-section-child1 img {
+  width: 10rem;
+  height: 10rem;
+  margin: auto;
+  align-content: center;
+}
+.content-section-child1 h3 {
+  color: #d4af37;
+}
+.content-section-child1 p {
+  color: #f4f4f4;
+}
+
+/* our content section ./ */
+
+/* Featured videos and latest release section */
+.featured-video-outer-div {
+  width: 180vh;
+  margin: auto;
+  text-align: center;
+}
+.featured-video-outer-div h2 {
+  font-size: xx-large;
+  color: #d4af37;
+  padding: 20px 0px 5px 0px;
+}
+.featured-video-inner-div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.featured-child {
+  padding: 10px;
+}
+
+/* featured videos/latest releases ./ */
+
+/* history archive section */
+
+.history-outer-div {
+  border-bottom: 2px solid #facc15;
+}
+
+.history-outer-div h2 {
+  color: #d4af37;
+  font-size: xx-large;
+  padding: 10px;
+  /* border-top:1px solid #D4AF37 */
+}
+
+.history-parent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 30px;
+}
+.history-child1,
+.history-child2,
+.history-child3,
+.history-child4,
+.history-child5 {
+  padding: 10px 20px;
+  border: 1px solid #facc15;
+}
+
+.history-child1,
+.history-child2,
+.history-child3,
+.history-child4,
+.history-child5 h3 {
+  font-size: larger;
+  color: #d4af37;
+  padding: 110px 0px 0px 20px;
+  margin-bottom: 15px;
+}
+
+.card-history-archive {
+  color: #f4f4f4;
+  text-decoration: none;
+  padding: 4px 16px;
+  border: 1px solid #d4af37;
+  border-radius: 6px;
+}
+.history-child1 {
+  background-image: url(assets/char-sahib-jaade.png);
+  width: 20%;
+  background-size: cover;
+  height: 25vh;
+  background-repeat: no-repeat;
+}
+
+.history-child1 h3 {
+  margin-bottom: 15px;
+}
+
+.history-child1-img {
+  width: fit-content;
+}
+.history-child2 {
+  background-image: url(assets/shaheedi-kahaniya.png);
+  width: 20%;
+  background-size: cover;
+  height: 25vh;
+
+  background-repeat: no-repeat;
+}
+.history-child2 h3 {
+  margin-bottom: 15px;
+}
+.history-child3 {
+  background-image: url(assets/punjbai-under-mughals.png);
+  width: 20%;
+  background-size: cover;
+  height: 25vh;
+  background-repeat: no-repeat;
+}
+
+.history-child3 h3 {
+  margin-bottom: 15px;
+}
+
+.history-child4 {
+  background-image: url(assets/ghadar.png);
+  background-size: cover;
+  width: 20%;
+  height: 25vh;
+  background-repeat: no-repeat;
+}
+
+.history-child4 h3 {
+  margin-bottom: 15px;
+}
+
+.history-child5 {
+  background-image: url(assets/historic-fort.png);
+  background-size: cover;
+  width: 20%;
+  height: 25vh;
+  background-repeat: no-repeat;
+}
+
+.history-child5 h3 {
+  margin-bottom: 15px;
+}
+
+/* History seciton  */
+
+.podcast-spotlight-outer-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.podcast-spotlight-outer-parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50vh;
+}
+
+.podcast-heading-child h3 {
+  color: #d4af37;
+  font-size: xx-large;
+  font-weight: 600;
+}
+
+.podcast-view-all-text-child {
+  padding: 4px 16px;
+  background-color: transparent;
+}
+
+.podcast-view-all-text-child a {
+  font-size: large;
+  font-weight: 500;
+  color: #f4f4f4;
+  text-decoration: none;
+}
+
+.podcast-outer-card-parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+.podcast-card-parent1 {
+  max-width: 40%;
+  height: 15rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 0px;
+  border: 1px solid #d4af37;
+  border-radius: 12px;
+}
+
+/* .podcast-btn-outer-parent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    width: 200px;
+    padding: 4px 16px;
+    background-color: #d4af37;
+} */
+
+.podcast-card-parent2 {
+  max-width: 40%;
+  height: 15rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 0px;
+  border: 1px solid #d4af37;
+  border-radius: 12px;
+  background-color: hsla(220, 29%, 6%, 0.503);
+}
+
+.podcast-card-parent2 pre {
+  font-size: x-large;
+}
+
+.podcast-card-parent2 pre,
+p {
+  color: #f4f4f4;
+}
+
+#watch-text-podcast-btn {
+  text-decoration: none;
+}
+
+.podcast-img-child img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.podcast-watch-text {
+  color: #151b26;
+}
+
+#btn-width {
+  width: fit-content;
+  margin: auto;
+}
+
+.btn-innermost-div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 5px;
+  text-align: center;
+  align-content: center;
+  background-color: #d4af37;
+  width: fit-content;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+/* the podcast spotlight section ./ */
+
+/* Why kissa panjab section begins here  */
+
+.why-section-parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 40px;
+  background-color: transparent;
+}
+
+.outer-div-why-cards{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  padding: 10px 20px;
+}
+
+.why-section-parent h3 {
+  font-size: xx-large;
+  color: #d4af37;
+  text-align: center;
+  padding: 10px;
+}
+
+.kissa-panjab-child1{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px 30px;
+  width: 33%;
+}
+
+.why-section-img-div img {
+  width: 8rem;
+  align-self: center;
+}
+.why-section-text-div h4{
+  color: #d4af37;
+  padding: 5px 10px ;
+  font-size: x-large;
+  text-align: center;
+  align-content: center;
+}
+
+.why-section-text-div p{
+  font-size: large;
+  font-weight: 300;
+  padding: 10px 5px ;
+  text-align: center;
+  align-content:end;
+}
+
+.left-border-why-section{
+  border-right: 1px solid #d4af37;
+  
+}
+
+
+/* why kissa panjab section ends here ./ */
+
+/* The subscribe section */
+
+
+.outer-div-copy{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.background-img-subs{
+background-image: url(assets/subs-background.png);
+background-size:cover ;
+background-repeat: no-repeat;
+padding: 20px;
+}
+
+.join-journey-section h3{
+  padding: 10px 5px;
+  text-align: center;
+} 
+
+#pun-text-journey-section{
+  font-size: xx-large;
+}
+
+#eng-text-journey-section{
+  font-size: x-large;
+}
+
+.subs-footer-img{
+  padding: 10px;
+  background: #d4af37; 
+  border-radius: 6px;
+  border: 1px solid #0b0e14;
+  display: block;
+  width: fit-content;
+  min-width: fit-content;
+  margin: auto;
+  margin-top: 10px;
+}
+#subs-text{
+  color: #0b0e14;
+}
+
+.subs-anker{
+  text-decoration: none;
+}
+
+/* Footer section */
+
+.outer-div-footer{
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ max-width: 1200px;
+ gap: 40px;
+ min-width: fit-content;
+ margin: auto;
+}
+
+.footer-child1{
+  display: flex;
+  justify-content: center;
+  flex-direction:row;
+  max-width: 33%;
+  min-width: 30%;
+  padding: 20px;
+}
+.footer-img img{
+  width: 200px;
+  border-radius: 50%;
+}
+.footer-img{
+  padding: 15px;
+}
+
+.footer-text{
+  padding: 10px;
+
+}
+
+.footer-text h4{
+  color: #d4af37;
+  font-size: 30px;
+  text-align: center;
+  padding: 10px;
+}
+
+.footer-text p{
+  color: #f4f4f4;
+  /* padding: 8px; */
+  font-size: large;
+  text-align: center;
+}
+
+.footer-link-child2{
+  max-width: 33%;
+  min-width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border-right: 1px solid #d4af37;
+  border-left:1px solid #d4af37
+}
+
+
+.footer-link-child2 h5{
+  color: #d4af37;
+   text-align: center;
+ font-size: larger;
+}
+
+.inner-link-footer{
+  color: #f4f4f4;
+  text-decoration: none;
+}
+.link-footer{
+  margin: auto;
+}
+
+.footer-icon-child3{
+  max-width: 33%;
+  min-width:30%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.footer-icon-child3 h5{
+  color: #d4af37;
+  font-size: 30px;
+  text-align: center;
+  padding: 12px;
+}
+
+.inner-div-icon{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px;
+  gap: 30px;
+}
+
+.icon-footer-inner-link-div{
+  min-width: max-content;
+
+}
+
+.icon-footer-inner-link{
+  color: #f4f4f4;
+  text-decoration: none;
+  font-size: large;
+}
+
+.last-line-footer{
+  text-align: center;
+  color: #f4f4f4;
+  border-top: 1px solid #d4af37;
+  padding: 5px;
+  
+}
