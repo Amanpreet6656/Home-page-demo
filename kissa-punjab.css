@@ -6,6 +6,12 @@
   /* outline: 1px solid white; */
 }
 
+::selection{
+  background-color: #d4af37;
+  color: #0b0e14;
+
+}
+
 :root {
   --bg-main: #0b0e14;
   --text-main: #d4af37;
@@ -35,8 +41,8 @@ body {
   border-bottom: 1px solid white;
   position: fixed;
   width: 100%;
-  max-width: 1515px;
-  min-width: 1200px;
+  max-width: 100vw;
+  min-width: 90vw;
   background-color: rgba(10, 10, 10, 0.6);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -52,15 +58,24 @@ body {
   display: flex;
   flex-direction: row;
   gap: 25px;
-  padding: 10px;
+  padding: 15px;
   background-color: transparent;
 }
 
 .nav-links a {
-  padding: 10px;
+  padding: 10px 10px 5px 10px ;
   background-color: transparent;
   color: #f4f4f4;
   text-decoration: none;
+  transition: 0.4s ease-out;
+   border-radius: 8px;
+}
+.nav-links a:hover{
+  background-color: #f4f4f4;
+ 
+  color: #0b0e14;
+  transform: scale(1.01);
+  font-weight: 500;
 }
 
 .nav-actions {
@@ -86,6 +101,12 @@ body {
   border-radius: 6px;
   margin: auto;
   font-weight: 800;
+  transition: 0.3s ease-in-out;
+}
+#nav-subscribe-text:hover{
+  background-color:#0b0e14 ;
+  color:#d4af37 ;
+  outline: 1px solid #d4af37;
 }
 
 /* heading section  */
@@ -102,7 +123,7 @@ body {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(assets/Gemini_Generated_Image_iaii9niaii9niaii.png);
+  background-image: url(assets/Gemini_Generated_Image_iaii9niaii9niaii.webp);
 }
 
 .hero-section h1 {
@@ -127,6 +148,16 @@ body {
   padding: 4px 16px;
   background-color: #d4af37;
   border-radius: 6px;
+  transition: 0.3s ease;
+}
+.hero-section-child1:hover{
+  background-color: #0b0e14;
+  color: #d4af37;
+  transform: scale(1.05);
+  outline: 1px solid #d4af37;
+}
+.hero-section-child1:hover span{
+  color: #d4af37;
 }
 
 .text-decoration-hero{
@@ -147,14 +178,22 @@ body {
   margin-top: px;
 }
 
+
 .text-center-class {
   margin-top: 10px;
+ 
 }
+
+
 
 .hero-section-text {
   color: #151b26;
   text-align: center;
   align-content: center;
+  transition: 0.2s ease;
+}
+.hero-section-text:hover{
+  color: #d4af37;
 }
 
 .hero-section-img img {
@@ -169,12 +208,20 @@ body {
   border-radius: 6px;
   align-content: center;
   border: 1px solid #d4af37;
+  transition:0.3s ease; 
+}
+
+.hero-section-child2:hover{
+  transform: scale(1.05);
+  outline: 2px solid #d4af37;
 }
 
 .hero-section-btn-text {
   text-decoration: none;
   color: #d4af37;
 }
+
+
 /* hero section ./ */
 
 /* About kissa panjab section */
@@ -260,7 +307,7 @@ body {
 
 /* Featured videos and latest release section */
 .featured-video-outer-div {
-  width: 180vh;
+  width: 90vw;
   margin: auto;
   text-align: center;
 }
@@ -272,7 +319,7 @@ body {
 .featured-video-inner-div {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
@@ -332,7 +379,7 @@ body {
   border-radius: 6px;
 }
 .history-child1 {
-  background-image: url(assets/char-sahib-jaade.png);
+  background-image: url(assets/char-sahib-jaade.webp);
   width: 20%;
   background-size: cover;
   height: 25vh;
@@ -347,7 +394,7 @@ body {
   width: fit-content;
 }
 .history-child2 {
-  background-image: url(assets/shaheedi-kahaniya.png);
+  background-image: url(assets/shaheedi-kahaniya.webp);
   width: 20%;
   background-size: cover;
   height: 25vh;
@@ -358,7 +405,7 @@ body {
   margin-bottom: 15px;
 }
 .history-child3 {
-  background-image: url(assets/punjbai-under-mughals.png);
+  background-image: url(assets/punjbai-under-mughals.webp);
   width: 20%;
   background-size: cover;
   height: 25vh;
@@ -370,7 +417,7 @@ body {
 }
 
 .history-child4 {
-  background-image: url(assets/ghadar.png);
+  background-image: url(assets/ghadar.webp);
   background-size: cover;
   width: 20%;
   height: 25vh;
@@ -382,7 +429,7 @@ body {
 }
 
 .history-child5 {
-  background-image: url(assets/historic-fort.png);
+  background-image: url(assets/historic-fort.webp);
   background-size: cover;
   width: 20%;
   height: 25vh;
@@ -393,8 +440,8 @@ body {
   margin-bottom: 15px;
 }
 
-/* History seciton  */
-
+/* History seciton  ./*/
+/* the podcast spotlight  */
 .podcast-spotlight-outer-div {
   display: flex;
   flex-direction: column;
@@ -573,6 +620,82 @@ p {
 
 /* why kissa panjab section ends here ./ */
 
+/* owner section */
+.owner-section-outer-div{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 20px;
+  background-image: url(assets/owner-background.webp);
+  background-size: cover;
+  padding: 15px;
+}
+
+.photo-section-child{
+  padding: 5px;
+}
+
+.owner-img{
+  min-width: 200px;
+  max-width: 300px;
+  border-radius: 12px;
+  border: 1px solid #d4af37;
+  transition: 0.3s ease-in-out;
+}
+.owner-img:hover{
+  transform: scale(1.05);
+  border: 2px solid #d4af37;
+}
+
+.name-info-child{
+  min-width: 500px;
+  max-width: 700px;
+  background-color: #0000005e;
+  border-radius: 12px;
+  border: 2px solid black;
+  transition: 0.3s ease-in-out;
+}
+
+.name-info-child:hover{
+ transform: scale(1.05);
+ background-color:#000000e1 ;
+ border: 2px solid black;
+}
+
+.name-info-child h4{
+  font-size: 25px;
+  color: #d4af37;
+  padding: 10px;
+}
+.name-info-child h5{
+  font-size: x-large;
+  color: #facc15;
+  padding: 10px;
+}
+
+.owner-para{
+  text-align: left;
+  font-size: large;
+  color: #f4f4f4;
+  padding: 10px;
+  text-shadow: 0px 0px 8px #0b0e14;
+}
+
+.waheguru-text{
+  padding: 10px;
+  padding: 5px;
+  color: #facc15;
+  font-size: x-large;
+  font-family: "Edu NSW ACT Cursive", cursive;
+}
+
+.waheguru-margin{
+  margin-top: 20px;
+}
+
+/* owner section ./ */
+
 /* The subscribe section */
 
 
@@ -583,7 +706,7 @@ p {
 }
 
 .background-img-subs{
-background-image: url(assets/subs-background.png);
+background-image: url(assets/subs-background.webp);
 background-size:cover ;
 background-repeat: no-repeat;
 padding: 20px;
@@ -612,14 +735,24 @@ padding: 20px;
   min-width: fit-content;
   margin: auto;
   margin-top: 10px;
+  transition: 0.3s ease;
 }
-#subs-text{
+.subs-footer-img:hover{
+  background-color: #0b0e14;
+  color:#d4af37;
+  outline: 2px solid #d4af37;
+  transform: scale(1.05);
+}
+
+.subs-footer-img:hover a{
+  color: #d4af37;
+}
+.subs-anker{
+  text-decoration: none;
+  transition: 0.3s ease;
   color: #0b0e14;
 }
 
-.subs-anker{
-  text-decoration: none;
-}
 
 /* Footer section */
 
