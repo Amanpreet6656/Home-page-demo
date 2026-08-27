@@ -26,7 +26,7 @@
 
 body {
   background-color: var(--bg-main);
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden;
   font-family: var(--font-body);
 }
 
@@ -38,17 +38,21 @@ body {
 .nav-outer-div {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; /* Removed rigid gap: 250px */
+  justify-content: space-between;
   align-items: center;
   padding: 10px 40px;
-  border-bottom: 1px solid white;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000; /* Ensure nav stays on top */
-  background-color: rgba(10, 10, 10, 0.8);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(20px);
+  z-index: 1000;
+  /* Upgraded Glassmorphism */
+  background-color: rgba(11, 14, 20, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  /* Drop-down animation applied directly to the fixed container */
+  animation: slideDownHeader 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .nav-inner-div-img img {
@@ -101,7 +105,6 @@ body {
   outline: 1px solid #d4af37;
 }
 
-/* Added spacer to prevent hero section from hiding under fixed header */
 .header-spacer {
   height: 85px; 
 }
@@ -119,16 +122,23 @@ body {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url('assets/Gemini_Generated_Image_iaii9niaii9niaii.webp');
+  /* Cinematic lighting and shadows */
+  background-image: linear-gradient(to bottom, rgba(11, 14, 20, 0.3), rgba(11, 14, 20, 1)), url('assets/Gemini_Generated_Image_iaii9niaii9niaii.webp');
+  box-shadow: inset 0 0 100px rgba(0,0,0,0.8);
   border-radius: 12px;
   padding: 40px 20px;
 }
 
 .hero-section h1 {
   text-align: center;
-  font-size: clamp(40px, 8vw, 80px); /* Responsive font sizing */
-  color: #facc15;
+  font-size: clamp(40px, 8vw, 80px);
   font-family: var(--font-heading);
+  /* Realistic metallic gold text */
+  background: linear-gradient(45deg, #aa771c, #facc15, #d4af37, #facc15);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0px 4px 10px rgba(250, 204, 21, 0.3));
 }
 
 .hero-section p {
@@ -222,10 +232,13 @@ body {
 .about-child-img {
   width: 10rem;
   border-radius: 50%;
+  /* Physical frame realism */
+  border: 3px solid #d4af37;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.6), 0 0 20px var(--accent-glow);
 }
 
 .about-child-text {
-  max-width: 800px; /* Fixed: Removed 90vh to prevent horizontal overflow */
+  max-width: 800px; 
   width: 100%;
 }
 
@@ -256,7 +269,6 @@ body {
   margin: auto;
 }
 
-/* Converted to Grid for true responsiveness */
 .content-section-parent {
   display: grid;
   grid-template-columns: repeat(5, 1fr); 
@@ -266,10 +278,19 @@ body {
 
 .content-section-child1 {
   padding: 20px;
-  background-color: #0f1521;
-  border: 1px solid #d4af37;
   border-radius: 10px;
   text-align: center;
+  /* Upgraded Card Depth */
+  background: linear-gradient(145deg, #151b26, #0b0e14);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.content-section-child1:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.8);
 }
 
 .content-section-child1 img {
@@ -305,7 +326,6 @@ body {
   font-family: var(--font-heading);
 }
 
-/* Converted to Grid to enable proper wrapping and media queries */
 .featured-video-inner-div {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -330,7 +350,6 @@ body {
   font-family: var(--font-heading);
 }
 
-/* Converted to Grid */
 .history-parent {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -401,7 +420,6 @@ body {
   font-family: var(--font-heading);
 }
 
-/* Converted to Grid */
 .outer-div-why-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -457,8 +475,10 @@ body {
   width: 100%;
   max-width: 300px;
   border-radius: 12px;
-  border: 1px solid #d4af37;
-  transition: 0.3s ease-in-out;
+  /* Deep realistic shadow */
+  border: 2px solid rgba(212, 175, 55, 0.5);
+  box-shadow: 10px 20px 40px rgba(0,0,0,0.8);
+  transition: 0.4s ease-in-out;
 }
 
 .owner-img:hover {
@@ -468,7 +488,7 @@ body {
 
 .name-info-child {
   width: 100%;
-  max-width: 700px; /* Removed rigid min-width */
+  max-width: 700px; 
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 12px;
   border: 2px solid #111;
@@ -570,7 +590,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  flex-wrap: wrap; /* Allows stacking */
+  flex-wrap: wrap; 
   max-width: 1200px;
   gap: 40px;
   margin: auto;
@@ -579,7 +599,7 @@ footer {
 
 .footer-child1, .footer-link-child2, .footer-icon-child3 {
   flex: 1;
-  min-width: 250px; /* Fluid scaling for mobile stacking */
+  min-width: 250px; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -632,7 +652,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  align-items: flex-start; /* Align text properly */
+  align-items: flex-start; 
 }
 
 .icon-footer-inner-link {
@@ -674,7 +694,6 @@ footer {
     gap: 15px;
   }
 
-  /* Grid Conversions for Tablet */
   .featured-video-inner-div {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -706,16 +725,16 @@ footer {
    ========================================================== */
 @media screen and (max-width: 768px) {
   
-  /* Header Fixes */
   .nav-outer-div {
     flex-direction: column;
     gap: 15px;
     padding: 15px;
-    position: static; /* Remove fixed position on very small screens to avoid UI overlap */
+    position: fixed; 
   }
 
   .header-spacer {
-    display: none;
+    display: block; 
+    height: 180px; 
   }
 
   .nav-links {
@@ -728,19 +747,16 @@ footer {
     font-size: 13px;
   }
 
-  /* Hero Section */
   .hero-section-parent {
     flex-direction: column;
     align-items: stretch;
   }
 
-  /* About Section */
   .about-parent {
     flex-direction: column;
     text-align: center;
   }
 
-  /* Grid Conversions for Mobile */
   .featured-video-inner-div {
     grid-template-columns: 1fr;
   }
@@ -770,7 +786,6 @@ footer {
     margin-bottom: 10px;
   }
 
-  /* Footer Resizing */
   .footer-link-child2 {
     border-right: none;
     border-left: none;
@@ -780,7 +795,7 @@ footer {
   }
   
   .inner-div-icon {
-    align-items: center; /* Center follow links on mobile */
+    align-items: center; 
   }
 }
 
@@ -796,3 +811,29 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================================
+   SCROLL ANIMATION (Triggered by JavaScript)
+   ========================================================== */
+
+/* 1. Initial hidden state for all sections and footer */
+main section, 
+footer {
+  opacity: 0;
+  transform: translateY(60px); 
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform; 
+}
+
+/* 2. The class JavaScript will add when the element is on screen */
+main section.show-on-scroll, 
+footer.show-on-scroll {
+  opacity: 1;
+  transform: translateY(0); 
+}
+
+/* 3. The drop-down animation for the nav bar is handled up at the top in .nav-outer-div */
+@keyframes slideDownHeader {
+  0% { opacity: 0; transform: translateY(-100%); }
+  100% { opacity: 1; transform: translateY(0); }
+}   
