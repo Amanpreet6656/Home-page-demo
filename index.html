@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kissa panjab | Home page</title>
-    <link rel="stylesheet" href="kissa-punjab.css" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Fixed the typo in the type attribute -->
     <link
       rel="shortcut icon"
       href="assets/kissa-panjab-logo.webp"
-      type="image/webpkissa-panjab-logo.webp"
+      type="image/webp"
     />
     <!--  Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,7 +23,6 @@
       src="https://kit.fontawesome.com/1d522dc682.js"
       crossorigin="anonymous"
     ></script>
-    <!-- font awesome ./ -->
   </head>
 
   <body>
@@ -33,8 +33,8 @@
         </div>
 
         <div class="nav-links">
-          <a href="#">HOME</a>
-          <a href="History.html">HISTORY</a>
+          <a class="active" href="#">HOME</a>
+          <a href="#">HISTORY</a>
           <a href="#">PODCASTS</a>
           <a href="#">ABOUT US</a>
           <a href="#">CONTACT</a>
@@ -48,12 +48,12 @@
           >
         </div>
       </div>
-      <div>
-        <img src="#" style="margin-bottom: 85px" alt="" />
-      </div>
+      <!-- Spacer for fixed header -->
+      <div class="header-spacer"></div>
     </header>
-    <!-- heading section ./ -->
+
     <main>
+      <!-- Hero section -->
       <section>
         <div class="hero-section">
           <h1>KISSA PANJAB</h1>
@@ -87,6 +87,8 @@
           </div>
         </div>
       </section>
+
+      <!-- About section -->
       <section>
         <div class="about-parent">
           <div class="about-child1">
@@ -106,11 +108,11 @@
           </div>
         </div>
       </section>
-      <!-- About section ./ -->
-      <!-- the Feautred video/ Latest Releases section -->
+
+      <!-- Latest Releases section -->
       <section>
         <div class="featured-video-outer-div">
-          <h2>LATEST REALEASES</h2>
+          <h2>LATEST RELEASES</h2>
           <div class="featured-video-inner-div">
             <div class="featured-child">
               <iframe
@@ -119,16 +121,7 @@
                 src="https://www.youtube.com/embed/YicHtb7atSU?si=uIyADBQmxHNImlUJ"
                 title="YouTube video player"
                 frameborder="0"
-                allow="
-                  accelerometer;
-                  autoplay;
-                  clipboard-write;
-                  encrypted-media;
-                  gyroscope;
-                  picture-in-picture;
-                  web-share;
-                "
-                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen
               ></iframe>
             </div>
@@ -139,16 +132,7 @@
                 src="https://www.youtube.com/embed/I06dLfNCU2g?si=Nur1BDp4_QFHkd2Q"
                 title="YouTube video player"
                 frameborder="0"
-                allow="
-                  accelerometer;
-                  autoplay;
-                  clipboard-write;
-                  encrypted-media;
-                  gyroscope;
-                  picture-in-picture;
-                  web-share;
-                "
-                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen
               ></iframe>
             </div>
@@ -159,16 +143,7 @@
                 src="https://www.youtube.com/embed/fS_bAFQB4j0?si=TUql6kEC1ERIiopP"
                 title="YouTube video player"
                 frameborder="0"
-                allow="
-                  accelerometer;
-                  autoplay;
-                  clipboard-write;
-                  encrypted-media;
-                  gyroscope;
-                  picture-in-picture;
-                  web-share;
-                "
-                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen
               ></iframe>
             </div>
@@ -179,16 +154,7 @@
                 src="https://www.youtube.com/embed/ldWE2Vs-0qM?si=BAlopXuiZ8LD6Lw1"
                 title="YouTube video player"
                 frameborder="0"
-                allow="
-                  accelerometer;
-                  autoplay;
-                  clipboard-write;
-                  encrypted-media;
-                  gyroscope;
-                  picture-in-picture;
-                  web-share;
-                "
-                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen
               ></iframe>
             </div>
@@ -196,16 +162,15 @@
         </div>
       </section>
 
-      <!-- latest archive /latest videos ./ -->
-      <!-- our content categories -->
+      <!-- Content Categories -->
       <section>
         <h2 id="content-category">OUR CONTENT CATEGORIES</h2>
         <div class="content-section-outer-div">
           <div class="content-section-parent">
             <div class="content-section-child1">
               <img src="assets/mic-logo.webp" alt="mic-logo" />
-              <h3>SPRITIUAL PODCASTS</h3>
-              <p>Rabb, spritiuality & life</p>
+              <h3>SPIRITUAL PODCASTS</h3>
+              <p>Rabb, spirituality & life</p>
             </div>
             <div class="content-section-child1">
               <img src="assets/fort-logo.webp" alt="fort-logo" />
@@ -217,8 +182,8 @@
                 src="assets/communication-logo.webp"
                 alt="communication-logo"
               />
-              <h3>INTERVIWS</h3>
-              <p>Meaningful Converstions</p>
+              <h3>INTERVIEWS</h3>
+              <p>Meaningful Conversations</p>
             </div>
             <div class="content-section-child1">
               <img src="assets/mystery-logo.webp" alt="mystery-logo" />
@@ -233,7 +198,8 @@
           </div>
         </div>
       </section>
-      <!-- the history section -->
+
+      <!-- History Archive section -->
       <section>
         <div class="history-outer-div">
           <h2>HISTORY ARCHIVE</h2>
@@ -261,9 +227,8 @@
           </div>
         </div>
       </section>
-      <!-- History section ./ -->
 
-      <!-- Why kissa panjab section begins here -->
+      <!-- Why kissa panjab section -->
       <section>
         <div class="why-section-parent">
           <h3>WHY KISSA PANJAB</h3>
@@ -314,28 +279,34 @@
           </div>
         </div>
       </section>
-      <!-- Why kissa panjab section ./  -->
+
       <!-- The owner section -->
       <section>
         <div class="owner-section-outer-div">
           <div class="photo-section-child">
-            <img class="owner-img" src="assets/owner-pic.webp" alt="owner-pic">
+            <img
+              class="owner-img"
+              src="assets/owner-pic.webp"
+              alt="owner-pic"
+            />
           </div>
           <div class="name-info-child">
-            <h4>
-              FOUNDER / HOST
-            </h4>
+            <h4>FOUNDER / HOST</h4>
             <h5>Gurpreet Singh</h5>
-            <p class="owner-para">A storyteller at heart and a seeker by soul. My mission is to bring Punjab's untold stories, spiritual wisdom and historical truths to the world through meaningful conversations and deep research.</p>
-            <p class="waheguru-text , waheguru-margin">Waheguru Ji ka Khalsa</p>
+            <p class="owner-para">
+              A storyteller at heart and a seeker by soul. My mission is to
+              bring Punjab's untold stories, spiritual wisdom and historical
+              truths to the world through meaningful conversations and deep
+              research.
+            </p>
+            <!-- Fixed class name comma error -->
+            <p class="waheguru-text waheguru-margin">Waheguru Ji ka Khalsa</p>
             <p class="waheguru-text">waheguru Ji Ki fateh</p>
           </div>
-
         </div>
-
       </section>
-      <!-- The owner section ./ -->
-      <!-- Subscribe to kissa panjab section -->
+
+      <!-- Subscribe section -->
       <section>
         <div class="background-img-subs">
           <div class="join-journey-section">
@@ -357,15 +328,17 @@
         </div>
       </section>
     </main>
-    <!-- subscribe to kissa panjab ./ -->
-    <!-- main section ./ -->
+
     <!-- footer section -->
     <footer>
       <div class="outer-div-copy">
         <div class="outer-div-footer">
           <div class="footer-child1">
             <div class="footer-img">
-              <img src="assets/kissa-panjab-logo.webp" alt="kissa-panjab-logo" />
+              <img
+                src="assets/kissa-panjab-logo.webp"
+                alt="kissa-panjab-logo"
+              />
             </div>
             <div class="footer-text">
               <h4>KISSA PANJAB</h4>
@@ -387,7 +360,7 @@
               <a class="inner-link-footer" href="#">About us</a>
             </div>
             <div class="link-footer">
-              <a class="inner-link-footer" href="#">contact</a>
+              <a class="inner-link-footer" href="#">Contact</a>
             </div>
           </div>
           <div class="footer-icon-child3">
@@ -398,28 +371,25 @@
                   class="icon-footer-inner-link"
                   href="https://www.youtube.com/@KissaPanjab/?sub_confirmation=1"
                 >
-                  <pre>  <i class="fa-brands fa-youtube"></i>
-Youtube</pre>
+                  <pre>  <i class="fa-brands fa-youtube"></i> Youtube</pre>
                 </a>
               </div>
               <div class="icon-footer-inner-link-div">
                 <a class="icon-footer-inner-link" href="#">
-                  <pre>  <i class="fa-brands fa-instagram"></i>
-Instagram</pre>
+                  <pre>  <i class="fa-brands fa-instagram"></i> Instagram</pre>
                 </a>
               </div>
               <div class="icon-footer-inner-link-div">
                 <a class="icon-footer-inner-link" href="#">
-                  <pre>  <i class="fa-brands fa-facebook"></i>
-Facebook</pre>
+                  <pre>  <i class="fa-brands fa-facebook"></i> Facebook</pre>
                 </a>
               </div>
             </div>
           </div>
-          </div>
-          <div class="last-line-footer">
-            &copy; 2026 KISSA PANJAB. ALL Rights Reserved.
-          </div>
+        </div>
+        <div class="last-line-footer">
+          &copy; 2026 KISSA PANJAB. ALL Rights Reserved.
+        </div>
       </div>
     </footer>
   </body>

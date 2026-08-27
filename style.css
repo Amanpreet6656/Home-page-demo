@@ -1,0 +1,798 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  word-spacing: 3px;
+}
+
+::selection {
+  background-color: #d4af37;
+  color: var(--bg-main);
+}
+
+:root {
+  --bg-main: #0b0e14;
+  --text-main: #d4af37;
+  --text-muted: #f4f4f4;
+  --accent: #facc15;
+  --accent-glow: rgba(250, 204, 21, 0.4);
+  --secondary: white;
+  --secondary-glow: rgba(225, 29, 72, 0.4);
+  --card-bg: #151b26;
+  --border-color: #d4af37; 
+  --font-heading: "Cinzel", serif;
+  --font-body: "Noto Sans Gurmukhi", sans-serif;
+}
+
+body {
+  background-color: var(--bg-main);
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-family: var(--font-body);
+}
+
+.active {
+  border-bottom: 2px dotted #d4af37;
+}
+
+/* heading section */
+.nav-outer-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Removed rigid gap: 250px */
+  align-items: center;
+  padding: 10px 40px;
+  border-bottom: 1px solid white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure nav stays on top */
+  background-color: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.nav-inner-div-img img {
+  height: 4.125rem;
+  width: 4.125rem;
+  border-radius: 50%;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  padding: 15px;
+}
+
+.nav-links a {
+  padding: 10px 10px 5px 10px;
+  color: #f4f4f4;
+  text-decoration: none;
+  transition: 0.4s ease-out;
+  border-radius: 8px;
+}
+
+.nav-links a:hover {
+  background-color: #d4af37;
+  color: var(--bg-main);
+  transform: scale(1.01);
+  font-weight: 500;
+}
+
+.nav-actions {
+  display: flex;
+  justify-content: center;
+}
+
+#nav-subscribe-text {
+  color: #151b26;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  background-color: #d4af37;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 800;
+  transition: 0.3s ease-in-out;
+}
+
+#nav-subscribe-text:hover {
+  background-color: var(--bg-main);
+  color: #d4af37;
+  outline: 1px solid #d4af37;
+}
+
+/* Added spacer to prevent hero section from hiding under fixed header */
+.header-spacer {
+  height: 85px; 
+}
+
+/* Hero section */
+.hero-section {
+  width: 95%;
+  min-height: 80vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('assets/Gemini_Generated_Image_iaii9niaii9niaii.webp');
+  border-radius: 12px;
+  padding: 40px 20px;
+}
+
+.hero-section h1 {
+  text-align: center;
+  font-size: clamp(40px, 8vw, 80px); /* Responsive font sizing */
+  color: #facc15;
+  font-family: var(--font-heading);
+}
+
+.hero-section p {
+  font-size: large;
+  text-align: center;
+  color: #f4f4f4;
+}
+
+.hero-section-parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+}
+
+.hero-section-child1 {
+  padding: 4px 16px;
+  background-color: #d4af37;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.hero-section-child1:hover {
+  background-color: var(--bg-main);
+  color: #d4af37;
+  transform: scale(1.05);
+  outline: 1px solid #d4af37;
+}
+
+.text-decoration-hero {
+  text-decoration: none;
+}
+
+.btn-hero-section-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-section-text {
+  color: #151b26;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.hero-section-child1:hover .hero-section-text {
+  color: #d4af37;
+}
+
+.hero-section-img img {
+  width: 2rem;
+  border-radius: 50%;
+  display: block;
+}
+
+.hero-section-child2 {
+  padding: 12px 16px;
+  background-color: transparent;
+  border-radius: 6px;
+  border: 1px solid #d4af37;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section-child2:hover {
+  transform: scale(1.05);
+  outline: 2px solid #d4af37;
+}
+
+.hero-section-btn-text {
+  text-decoration: none;
+  color: #d4af37;
+  font-weight: bold;
+}
+
+/* About kissa panjab section */
+.about-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  border-top: 2px solid #d4af37;
+  border-bottom: 2px solid #d4af37;
+  padding: 40px 20px;
+  margin-top: 40px;
+}
+
+.about-child-img {
+  width: 10rem;
+  border-radius: 50%;
+}
+
+.about-child-text {
+  max-width: 800px; /* Fixed: Removed 90vh to prevent horizontal overflow */
+  width: 100%;
+}
+
+.about-child-text h2 {
+  font-size: xx-large;
+  color: #d4af37;
+  padding-bottom: 10px;
+  font-family: var(--font-heading);
+}
+
+.about-child-text p {
+  color: #f4f4f4;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+/* OUR CONTENT CATEGORIES */
+#content-category {
+  color: #d4af37;
+  font-size: xx-large;
+  text-align: center;
+  padding: 40px 10px 20px;
+  font-family: var(--font-heading);
+}
+
+.content-section-outer-div {
+  width: 90%;
+  margin: auto;
+}
+
+/* Converted to Grid for true responsiveness */
+.content-section-parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 15px;
+  padding: 15px 0;
+}
+
+.content-section-child1 {
+  padding: 20px;
+  background-color: #0f1521;
+  border: 1px solid #d4af37;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.content-section-child1 img {
+  width: 8rem;
+  height: 8rem;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.content-section-child1 h3 {
+  color: #d4af37;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.content-section-child1 p {
+  color: #f4f4f4;
+  font-size: 0.9rem;
+}
+
+/* Featured videos section */
+.featured-video-outer-div {
+  width: 90vw;
+  margin: auto;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.featured-video-outer-div h2 {
+  font-size: xx-large;
+  color: #d4af37;
+  padding: 20px 0px;
+  font-family: var(--font-heading);
+}
+
+/* Converted to Grid to enable proper wrapping and media queries */
+.featured-video-inner-div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.featured-child iframe {
+  border-radius: 8px;
+}
+
+/* History archive section */
+.history-outer-div {
+  border-bottom: 2px solid #facc15;
+  padding-top: 40px;
+  text-align: center;
+}
+
+.history-outer-div h2 {
+  color: #d4af37;
+  font-size: xx-large;
+  padding: 10px;
+  font-family: var(--font-heading);
+}
+
+/* Converted to Grid */
+.history-parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  padding: 30px 5%;
+}
+
+.history-child1, .history-child2, .history-child3, .history-child4, .history-child5 {
+  padding: 20px;
+  border: 1px solid #facc15;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 25vh;
+  min-height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.history-child1 h3, .history-child2 h3, .history-child3 h3, .history-child4 h3, .history-child5 h3 {
+  font-size: 1.1rem;
+  color: #d4af37;
+  margin-bottom: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.card-history-archive {
+  color: #f4f4f4;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1px solid #d4af37;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.7);
+  transition: 0.3s;
+}
+
+.card-history-archive:hover {
+  background: #d4af37;
+  color: var(--bg-main);
+}
+
+/* Background Images */
+.history-child1 { background-image: url('assets/char-sahib-jaade.webp'); }
+.history-child2 { background-image: url('assets/shaheedi-kahaniya.webp'); }
+.history-child3 { background-image: url('assets/punjbai-under-mughals.webp'); }
+.history-child4 { background-image: url('assets/ghadar.webp'); }
+.history-child5 { background-image: url('assets/historic-fort.webp'); }
+
+/* Why kissa panjab section */
+.why-section-parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.why-section-parent h3 {
+  font-size: xx-large;
+  color: #d4af37;
+  text-align: center;
+  padding-bottom: 30px;
+  font-family: var(--font-heading);
+}
+
+/* Converted to Grid */
+.outer-div-why-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.kissa-panjab-child1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+}
+
+.why-section-img-div img {
+  width: 6rem;
+}
+
+.why-section-text-div h4 {
+  color: #d4af37;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.why-section-text-div p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #f4f4f4;
+}
+
+.left-border-why-section {
+  border-right: 1px solid #d4af37;
+  padding-right: 15px;
+}
+
+/* Owner section */
+.owner-section-outer-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  background-image: url('assets/owner-background.webp');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  margin-top: 20px;
+}
+
+.owner-img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+  border: 1px solid #d4af37;
+  transition: 0.3s ease-in-out;
+}
+
+.owner-img:hover {
+  transform: scale(1.05);
+  border: 2px solid #d4af37;
+}
+
+.name-info-child {
+  width: 100%;
+  max-width: 700px; /* Removed rigid min-width */
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  border: 2px solid #111;
+  padding: 30px;
+  transition: 0.3s ease-in-out;
+}
+
+.name-info-child:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.name-info-child h4 {
+  font-size: 25px;
+  color: #d4af37;
+  margin-bottom: 5px;
+}
+
+.name-info-child h5 {
+  font-size: x-large;
+  color: #facc15;
+  margin-bottom: 15px;
+}
+
+.owner-para {
+  font-size: large;
+  color: #f4f4f4;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.waheguru-text {
+  color: #facc15;
+  font-size: 1.5rem;
+  font-family: "Edu NSW ACT Cursive", cursive;
+}
+
+.waheguru-margin {
+  margin-top: 20px;
+}
+
+/* Subscribe section */
+.background-img-subs {
+  background-image: url('assets/subs-background.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px;
+}
+
+.join-journey-section h3 {
+  padding: 10px 5px;
+  text-align: center;
+  color: #f4f4f4;
+}
+
+#pun-text-journey-section {
+  font-size: xx-large;
+}
+
+#eng-text-journey-section {
+  font-size: x-large;
+  color: #d4af37;
+}
+
+.subs-footer-img {
+  padding: 15px 25px;
+  background: #d4af37;
+  border-radius: 6px;
+  display: block;
+  width: fit-content;
+  margin: 20px auto 0;
+  transition: 0.3s ease;
+}
+
+.subs-footer-img:hover {
+  background-color: var(--bg-main);
+  outline: 2px solid #d4af37;
+  transform: scale(1.05);
+}
+
+.subs-anker {
+  text-decoration: none;
+  color: var(--bg-main);
+  font-weight: bold;
+}
+
+.subs-footer-img:hover .subs-anker {
+  color: #d4af37;
+}
+
+/* Footer section */
+footer {
+  background-color: var(--bg-main);
+  border-top: 1px solid #333;
+  padding-top: 40px;
+}
+
+.outer-div-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Allows stacking */
+  max-width: 1200px;
+  gap: 40px;
+  margin: auto;
+  padding-bottom: 30px;
+}
+
+.footer-child1, .footer-link-child2, .footer-icon-child3 {
+  flex: 1;
+  min-width: 250px; /* Fluid scaling for mobile stacking */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-img img {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.footer-text h4 {
+  color: #d4af37;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer-text p {
+  color: #f4f4f4;
+}
+
+.footer-link-child2 {
+  border-right: 1px solid #d4af37;
+  border-left: 1px solid #d4af37;
+  padding: 0 20px;
+}
+
+.footer-link-child2 h5, .footer-icon-child3 h5 {
+  color: #d4af37;
+  font-size: larger;
+  margin-bottom: 20px;
+}
+
+.link-footer {
+  margin-bottom: 10px;
+}
+
+.inner-link-footer {
+  color: #f4f4f4;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.inner-link-footer:hover {
+  color: #d4af37;
+}
+
+.inner-div-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start; /* Align text properly */
+}
+
+.icon-footer-inner-link {
+  color: #f4f4f4;
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.2s;
+}
+
+.icon-footer-inner-link:hover {
+  color: #d4af37;
+}
+
+.icon-footer-inner-link pre {
+  font-family: inherit;
+  margin: 0;
+}
+
+.last-line-footer {
+  text-align: center;
+  color: #f4f4f4;
+  border-top: 1px solid #d4af37;
+  padding: 15px;
+  background-color: #0b0e14;
+}
+
+/* ==========================================================
+   TABLET RESPONSIVE BREAKPOINT (max-width: 1024px)
+   ========================================================== */
+@media screen and (max-width: 1024px) {
+  .nav-outer-div {
+    padding: 15px 20px;
+  }
+  
+  .nav-links {
+    gap: 15px;
+  }
+
+  /* Grid Conversions for Tablet */
+  .featured-video-inner-div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .content-section-parent {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .history-parent {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .outer-div-why-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .owner-section-outer-div {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .name-info-child {
+    text-align: center;
+  }
+}
+
+/* ==========================================================
+   MOBILE RESPONSIVE BREAKPOINT (max-width: 768px)
+   ========================================================== */
+@media screen and (max-width: 768px) {
+  
+  /* Header Fixes */
+  .nav-outer-div {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    position: static; /* Remove fixed position on very small screens to avoid UI overlap */
+  }
+
+  .header-spacer {
+    display: none;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  /* Hero Section */
+  .hero-section-parent {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* About Section */
+  .about-parent {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Grid Conversions for Mobile */
+  .featured-video-inner-div {
+    grid-template-columns: 1fr;
+  }
+
+  .content-section-parent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .history-parent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .outer-div-why-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .kissa-panjab-child1 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left-border-why-section {
+    border-right: none;
+    padding-right: 0;
+    border-bottom: 1px solid #d4af37;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+
+  /* Footer Resizing */
+  .footer-link-child2 {
+    border-right: none;
+    border-left: none;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 20px 0;
+  }
+  
+  .inner-div-icon {
+    align-items: center; /* Center follow links on mobile */
+  }
+}
+
+/* ==========================================================
+   SMALL MOBILE BREAKPOINT (max-width: 480px)
+   ========================================================== */
+@media screen and (max-width: 480px) {
+  .content-section-parent {
+    grid-template-columns: 1fr;
+  }
+
+  .history-parent {
+    grid-template-columns: 1fr;
+  }
+}
