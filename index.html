@@ -1,23 +1,28 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Meta Tags & Character Encoding -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kissa panjab | Home page</title>
+    
+    <!-- External Stylesheets & Favicon -->
     <link rel="stylesheet" href="style.css" />
     <link
       rel="shortcut icon"
       href="assets/kissa-panjab-logo.webp"
       type="image/webp"
     />
-    <!--  Google fonts -->
+    
+    <!-- Google Fonts Preconnect & Stylesheet Imports -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Noto+Sans+Gurmukhi:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <!-- Font awesome -->
+    
+    <!-- Font Awesome Icon Kit -->
     <script
       src="https://kit.fontawesome.com/1d522dc682.js"
       crossorigin="anonymous"
@@ -25,79 +30,94 @@
   </head>
 
   <body>
+    <!-- Main Header & Navigation -->
     <header>
-      <div class="nav-outer-div">
-        <div class="nav-inner-div-img">
+      <div class="kp-nav-outer">
+        <!-- Site Brand Logo -->
+        <div class="kp-nav-logo">
           <img src="assets/kissa-panjab-logo.webp" alt="logo" />
         </div>
 
-        <div class="nav-links">
-          <a class="active" href="#">HOME</a>
-          <a href="#">HISTORY</a>
-          <a href="#">PODCASTS</a>
+        <!-- Navigation Menu Links -->
+        <div class="kp-nav-links">
+          <a class="kp-nav-link-active" href="#">HOME</a>
+          <a href="history.html">HISTORY</a>
+          <a href="#">OUR SERVICES</a>
           <a href="#">ABOUT US</a>
-          <a href="#">CONTACT</a>
         </div>
-        <div class="nav-actions">
-          <a
-            id="nav-subscribe-text"
-            target="_blank"
-            href="https://www.youtube.com/@KissaPanjab/?sub_confirmation=1"
-            >SUBSCRIBE</a
-          >
+
+        <!-- Header Action Button -->
+        <div class="kp-nav-actions">
+          <button class="kp-btn-subscribe"></button>
         </div>
       </div>
-      <!-- Spacer for fixed header -->
-      <div class="header-spacer"></div>
+      <!-- Spacer Element to Offset Fixed Header -->
+      <div class="kp-header-spacer"></div>
     </header>
 
     <main>
-      <!-- Hero section -->
-      <section>
-        <div class="hero-section">
+      <!-- Hero Banner Section -->
+      <section class="from-bottom">
+        <div class="kp-hero-section">
           <h1>KISSA PANJAB</h1>
           <div>
             <p>Spiritual podcasts, Sikh/Punjabi history,</p>
             <p>untold stories & meaningful conversations</p>
           </div>
-          <div class="hero-section-parent">
-            <div class="hero-section-child1">
+          <div class="kp-hero-actions">
+            <!-- Watch Podcast Call to Action -->
+            <div class="kp-hero-watch-btn">
               <a
-                class="text-decoration-hero"
+                class="kp-hero-link"
                 href="https://www.youtube.com/watch?v=a7Mqy-1y0CE"
               >
-                <div class="btn-hero-section-parent">
-                  <div class="img-flex-hero-section">
-                    <span class="hero-section-img">
-                      <img src="assets/play-logo.webp" alt="play" />
-                    </span>
-                  </div>
-                  <div class="text-flex-hero-section">
-                    <div class="text-center-class">
-                      <span class="hero-section-text">WATCH PODCASTS</span>
-                    </div>
-                  </div>
-                </div>
+                <button
+                  onclick="window.location.href = 'history.html'"
+                  class="kp-btn-play"
+                >
+                  <svg
+                    class="kp-play-svg"
+                    viewBox="0 0 490.718 490.718"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M245.359,0.359C109.852,0.359,0,110.049,0,245.358s109.852,245,245.359,245s245.359-109.691,245.359-245 S380.866,0.359,245.359,0.359z M176.828,341.011V140.824l187.489,100.098L176.828,341.011z"/>
+                  </svg>
+                  WATCH PODCAST
+                </button>
               </a>
             </div>
-            <div class="hero-section-child2">
-              <a class="hero-section-btn-text" href="#">EXPLORE HISTORY</a>
-            </div>
+
+            <!-- Explore History Navigation Button -->
+            <button
+              onclick="window.location.href = 'history.html'"
+              class="kp-btn-explore"
+            >
+              <svg
+                class="kp-explore-svg"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"
+                ></path>
+              </svg>
+              Explore History
+            </button>
           </div>
         </div>
       </section>
 
-      <!-- About section -->
-      <section>
-        <div class="about-parent">
-          <div class="about-child1">
+      <!-- About Kissa Panjab Section -->
+      <section class="from-right">
+        <div class="kp-about-parent">
+          <div>
             <img
-              class="about-child-img"
+              class="kp-about-img"
               src="assets/kissa-panjab-logo.webp"
               alt="main-logo"
             />
           </div>
-          <div class="about-child-text">
+          <div class="kp-about-text">
             <h2>ABOUT KISSA PANJAB</h2>
             <p>
               KISSA PUNJAB ਇੱਕ Punjabi digital platform ਹੈ ਜਿੱਥੇ ਅਸੀਂ ਰੂਹਾਨੀਅਤ,
@@ -108,75 +128,66 @@
         </div>
       </section>
 
-      <!-- Latest Releases section -->
-      <section>
-        <div class="featured-video-outer-div">
+      <!-- Latest Video Releases & Channel Card Section -->
+      <section class="from-bottom">
+        <div class="kp-featured-outer">
           <h2>LATEST RELEASES</h2>
-          <div class="featured-video-inner-div">
-            <div class="featured-child">
-              <iframe
-                width="100%"
-                height="215"
-                src="https://www.youtube.com/embed/YicHtb7atSU?si=uIyADBQmxHNImlUJ"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
+          <div class="kp-featured-grid">
+            <div>
+              <!-- YouTube Channel Embed Card -->
+              <div class="kp-yt-card">
+                <img
+                  src="assets/channel-banner.webp"
+                  alt="Channel Banner"
+                  class="kp-yt-banner"
+                />
+                <div class="kp-yt-profile">
+                  <img
+                    src="assets/kissa-panjab-logo.webp"
+                    alt="Channel Avatar"
+                    class="kp-yt-avatar"
+                  />
+                  <div class="kp-yt-info">
+                    <h3 class="kp-yt-channel-name">Kissa Panjab</h3>
+                    <p class="kp-yt-subs">121K Subscribers</p>
+                  </div>
+                  <button
+                    onclick="
+                      window.location.href =
+                        'https://www.youtube.com/@KissaPanjab/?sub_confirmation=1'
+                    "
+                    class="kp-yt-subscribe-btn"
+                  >
+                    Subscribe
+                  </button>
+                </div>
+              </div>
             </div>
-            <div class="featured-child">
-              <iframe
-                width="100%"
-                height="215"
-                src="https://www.youtube.com/embed/I06dLfNCU2g?si=Nur1BDp4_QFHkd2Q"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <div class="featured-child">
-              <iframe
-                width="100%"
-                height="215"
-                src="https://www.youtube.com/embed/fS_bAFQB4j0?si=TUql6kEC1ERIiopP"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <div class="featured-child">
-              <iframe
-                width="100%"
-                height="215"
-                src="https://www.youtube.com/embed/ldWE2Vs-0qM?si=BAlopXuiZ8LD6Lw1"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-            </div>
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
         </div>
       </section>
 
-      <!-- Content Categories -->
-      <section>
-        <h2 id="content-category">OUR CONTENT CATEGORIES</h2>
-        <div class="content-section-outer-div">
-          <div class="content-section-parent">
-            <div class="content-section-child1">
+      <!-- Content Categories Showcase Grid -->
+      <section class="from-left">
+        <h2 id="content-category" class="kp-category-title">
+          OUR CONTENT CATEGORIES
+        </h2>
+        <div class="kp-category-outer">
+          <div class="kp-category-grid">
+            <div class="kp-category-card">
               <img src="assets/mic-logo.webp" alt="mic-logo" />
               <h3>SPIRITUAL PODCASTS</h3>
               <p>Rabb, spirituality & life</p>
             </div>
-            <div class="content-section-child1">
+            <div class="kp-category-card">
               <img src="assets/fort-logo.webp" alt="fort-logo" />
               <h3>PUNJABI/SIKH HISTORY</h3>
               <p>ਇਤਿਹਾਸ ਦੀਆਂ ਅਣਸੁਣੀਆਂ ਕਹਾਣੀਆਂ</p>
             </div>
-            <div class="content-section-child1">
+            <div style="display: none;" class="kp-category-card">
               <img
                 src="assets/communication-logo.webp"
                 alt="communication-logo"
@@ -184,12 +195,22 @@
               <h3>INTERVIEWS</h3>
               <p>Meaningful Conversations</p>
             </div>
-            <div class="content-section-child1">
+            <div style="display: none;" class="kp-category-card">
               <img src="assets/mystery-logo.webp" alt="mystery-logo" />
               <h3>MYSTERY</h3>
               <p>Untold stories</p>
             </div>
-            <div class="content-section-child1">
+            <div class="kp-category-card">
+              <img src="assets/book-logo.webp" alt="book-logo" />
+              <h3>BOOKS & RESEARCH</h3>
+              <p>Deep dives</p>
+            </div>
+            <div class="kp-category-card">
+              <img src="assets/book-logo.webp" alt="book-logo" />
+              <h3>BOOKS & RESEARCH</h3>
+              <p>Deep dives</p>
+            </div>
+            <div class="kp-category-card">
               <img src="assets/book-logo.webp" alt="book-logo" />
               <h3>BOOKS & RESEARCH</h3>
               <p>Deep dives</p>
@@ -198,79 +219,67 @@
         </div>
       </section>
 
-      <!-- History Archive section -->
-      <section>
-        <div class="history-outer-div">
+      <!-- History Archive Card Grid -->
+      <section class="from-bottom">
+        <div class="kp-history-archive-outer">
           <h2>HISTORY ARCHIVE</h2>
-          <div class="history-parent">
-            <div class="history-child1">
+          <div class="kp-history-archive-grid">
+            <div class="kp-history-card kp-history-bg-1">
               <h3>The Sikh Empire</h3>
-              <a class="card-history-archive" href="#">READ / WATCH</a>
+              <button onclick="window.Location.href='#'" class="kp-d-btn">Testing button</button>
             </div>
-            <div class="history-child2">
+            <div class="kp-history-card kp-history-bg-2">
               <h3>Shaheedi Kahaniya</h3>
-              <a class="card-history-archive" href="#">READ / WATCH</a>
+              <button onclick="window.Location.href='#'" class="kp-d-btn">Testing button</button>
             </div>
-            <div class="history-child3">
+            <div class="kp-history-card kp-history-bg-3">
               <h3>Punjab Under Mughals</h3>
-              <a class="card-history-archive" href="#">READ / WATCH</a>
+              <button onclick="window.Location.href='#'" class="kp-d-btn">Testing button</button>
             </div>
-            <div class="history-child4">
+            <div class="kp-history-card kp-history-bg-4">
               <h3>Ghadar Movement</h3>
-              <a class="card-history-archive" href="#">READ / WATCH</a>
+              <button onclick="window.Location.href='#'" class="kp-d-btn">Testing button</button>
             </div>
-            <div class="history-child5">
+            <div class="kp-history-card kp-history-bg-5">
               <h3>Historic Forts of Punjab</h3>
-              <a class="card-history-archive" href="#">READ / WATCH</a>
+              <button onclick="window.Location.href='#'" class="kp-d-btn">Testing button</button>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Why kissa panjab section -->
-      <section>
-        <div class="why-section-parent">
+      <!-- Core Values / Why Choose Us Section -->
+      <section class="from-right">
+        <div class="kp-why-section">
           <h3>WHY KISSA PANJAB</h3>
-          <div class="outer-div-why-cards">
-            <div class="kissa-panjab-child1">
-              <div class="why-section-img-div">
-                <img
-                  id="why-section-img-id"
-                  src="assets/letter-logo.webp"
-                  alt="letter-logo"
-                />
+          <div class="kp-why-cards-grid">
+            <div class="kp-why-card">
+              <div class="kp-why-icon-div">
+                <img src="assets/letter-logo.webp" alt="letter-logo" />
               </div>
-              <div class="why-section-text-div">
-                <h4 class="left-border-why-section">AUTHENTIC RESEARCH</h4>
-                <p class="left-border-why-section">
+              <div class="kp-why-text-div">
+                <h4 class="kp-border-divider">AUTHENTIC RESEARCH</h4>
+                <p class="kp-border-divider">
                   Thoroughly researched historical facts.
                 </p>
               </div>
             </div>
-            <div class="kissa-panjab-child1">
-              <div class="why-section-img-div">
-                <img
-                  id="why-section-img-id"
-                  src="assets/khanda.webp"
-                  alt="letter-logo"
-                />
+            <div class="kp-why-card">
+              <div class="kp-why-icon-div">
+                <img src="assets/khanda.webp" alt="letter-logo" />
               </div>
-              <div class="why-section-text-div">
-                <h4 class="left-border-why-section">LANGUAGE & CULTURE</h4>
-                <p class="left-border-why-section">
+              <div class="kp-why-text-div">
+                <h4 class="kp-border-divider">LANGUAGE & CULTURE</h4>
+                <p class="kp-border-divider">
                   Preserving the pure Punjabi essence.
                 </p>
               </div>
             </div>
-            <div class="kissa-panjab-child1">
-              <div class="why-section-img-div">
-                <img
-                  id="why-section-img-id"
-                  src="assets/light.webp"
-                  alt="letter-logo"
-                />
+            <div class="kp-why-card">
+              <div class="kp-why-icon-div">
+                <img src="assets/light.webp" alt="letter-logo" />
               </div>
-              <div class="why-section-text-div">
+              <div class="kp-why-text-div">
                 <h4>SPIRITUAL PERSPECTIVE</h4>
                 <p>Viewing history through a mindful lens.</p>
               </div>
@@ -279,43 +288,42 @@
         </div>
       </section>
 
-      <!-- The owner section -->
-      <section>
-        <div class="owner-section-outer-div">
-          <div class="photo-section-child">
+      <!-- Founder & Host Introduction Section -->
+      <section class="from-bottom">
+        <div class="kp-owner-outer">
+          <div>
             <img
-              class="owner-img"
+              class="kp-owner-img"
               src="assets/owner-pic.webp"
               alt="owner-pic"
             />
           </div>
-          <div class="name-info-child">
+          <div class="kp-owner-info">
             <h4>FOUNDER / HOST</h4>
             <h5>Gurpreet Singh</h5>
-            <p class="owner-para">
+            <p class="kp-owner-para">
               A storyteller at heart and a seeker by soul. My mission is to
               bring Punjab's untold stories, spiritual wisdom and historical
               truths to the world through meaningful conversations and deep
               research.
             </p>
-            <!-- Fixed class name comma error -->
-            <p class="waheguru-text waheguru-margin">Waheguru Ji ka Khalsa</p>
-            <p class="waheguru-text">waheguru Ji Ki fateh</p>
+            <p class="kp-waheguru-text kp-waheguru-margin">
+              Waheguru Ji ka Khalsa
+            </p>
+            <p class="kp-waheguru-text">waheguru Ji Ki fateh</p>
           </div>
         </div>
       </section>
 
-      <!-- Subscribe section -->
-      <section>
-        <div class="background-img-subs">
-          <div class="join-journey-section">
-            <h3 id="pun-text-journey-section">
-              ਪੰਜਾਬ ਦੀਆਂ ਕਹਾਣੀਆਂ ਨਾਲ ਜੁੜੇ ਰਹੋ
-            </h3>
-            <h3 id="eng-text-journey-section">JOIN THE JOURNEY</h3>
-            <div class="subs-footer-img">
+      <!-- Subscription Banner Section -->
+      <section class="from-left">
+        <div class="kp-subscribe-banner-bg">
+          <div class="kp-join-journey">
+            <h3 class="kp-punjabi-heading">ਪੰਜਾਬ ਦੀਆਂ ਕਹਾਣੀਆਂ ਨਾਲ ਜੁੜੇ ਰਹੋ</h3>
+            <h3 class="kp-english-heading">JOIN THE JOURNEY</h3>
+            <div class="kp-subscribe-btn-container">
               <a
-                class="subs-anker"
+                class="kp-subscribe-anchor"
                 href="https://www.youtube.com/@KissaPanjab/?sub_confirmation=1"
               >
                 <h4>
@@ -328,86 +336,113 @@
       </section>
     </main>
 
-    <!-- footer section -->
+    <!-- Main Footer Section -->
     <footer>
-      <div class="outer-div-copy">
-        <div class="outer-div-footer">
-          <div class="footer-child1">
-            <div class="footer-img">
+      <div>
+        <div class="kp-footer-outer">
+          <!-- Footer Branding Column -->
+          <div class="kp-footer-col">
+            <div class="kp-footer-logo">
               <img
                 src="assets/kissa-panjab-logo.webp"
                 alt="kissa-panjab-logo"
               />
             </div>
-            <div class="footer-text">
+            <div class="kp-footer-text">
               <h4>KISSA PANJAB</h4>
               <p>untangling history and spritiuality</p>
             </div>
           </div>
-          <div class="footer-link-child2">
+
+          <!-- Quick Navigation Links Column -->
+          <div class="kp-footer-col kp-footer-border-col">
             <h5>LINKS</h5>
-            <div class="link-footer">
-              <a class="inner-link-footer" href="#">Home</a>
+            <div class="kp-footer-link-item">
+              <a class="kp-footer-anchor" href="#">Home</a>
             </div>
-            <div class="link-footer">
-              <a class="inner-link-footer" href="#">History</a>
+            <div class="kp-footer-link-item">
+              <a class="kp-footer-anchor" href="#">History</a>
             </div>
-            <div class="link-footer">
-              <a class="inner-link-footer" href="#">Podcasts</a>
+            <div class="kp-footer-link-item">
+              <a class="kp-footer-anchor" href="#">Podcasts</a>
             </div>
-            <div class="link-footer">
-              <a class="inner-link-footer" href="#">About us</a>
+            <div class="kp-footer-link-item">
+              <a class="kp-footer-anchor" href="#">About us</a>
             </div>
-            <div class="link-footer">
-              <a class="inner-link-footer" href="#">Contact</a>
+            <div class="kp-footer-link-item">
+              <a class="kp-footer-anchor" href="#">Contact</a>
             </div>
           </div>
-          <div class="footer-icon-child3">
+
+          <!-- Social Media Profiles Column -->
+          <div class="kp-footer-col">
             <h5>FOLLOW US</h5>
-            <div class="inner-div-icon">
-              <div class="icon-footer-inner-link-div">
+            <div class="kp-footer-social-group">
+              <div>
                 <a
-                  class="icon-footer-inner-link"
+                  class="kp-social-anchor"
                   href="https://www.youtube.com/@KissaPanjab/?sub_confirmation=1"
                 >
                   <pre>  <i class="fa-brands fa-youtube"></i> Youtube</pre>
                 </a>
               </div>
-              <div class="icon-footer-inner-link-div">
-                <a class="icon-footer-inner-link" href="#">
+              <div>
+                <a class="kp-social-anchor" href="#">
                   <pre>  <i class="fa-brands fa-instagram"></i> Instagram</pre>
                 </a>
               </div>
-              <div class="icon-footer-inner-link-div">
-                <a class="icon-footer-inner-link" href="#">
+              <div>
+                <a class="kp-social-anchor" href="#">
                   <pre>  <i class="fa-brands fa-facebook"></i> Facebook</pre>
                 </a>
               </div>
             </div>
           </div>
         </div>
-        <div class="last-line-footer">
+
+        <!-- Bottom Copyright Bar -->
+        <div class="kp-copyright-bar">
           &copy; 2026 KISSA PANJAB. ALL Rights Reserved.
         </div>
       </div>
     </footer>
 
-    <!-- INTERSECTION OBSERVER SCRIPT ADDED HERE -->
+    <!-- Scroll Reveal Animation (Intersection Observer) Script -->
     <script>
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('show-on-scroll');
-          } else {
-            entry.target.classList.remove('show-on-scroll');
-          }
-        });
-      }, {
-        threshold: 0.15 
-      });
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show-on-scroll");
+            } else {
+              entry.target.classList.remove("show-on-scroll");
+            }
+          });
+        },
+        { threshold: 0.15 },
+      );
 
-      const hiddenElements = document.querySelectorAll('main section, footer');
+      const hiddenElements = document.querySelectorAll("main section, footer");
       hiddenElements.forEach((el) => observer.observe(el));
+    </script>
+
+    <!-- Sticky Navigation Scroll Behavior Script -->
+    <script>
+      let lastScrollY = window.scrollY;
+      const navbar = document.querySelector('.kp-nav-outer');
+
+      window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+
+        // Hide on scroll down (after scrolling past 100px), show on scroll up
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+          navbar.classList.add('kp-nav-hidden');
+        } else {
+          navbar.classList.remove('kp-nav-hidden');
+        }
+
+        lastScrollY = currentScrollY;
+      });
     </script>
   </body>
 </html>
